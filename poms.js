@@ -8,6 +8,7 @@ const path = require('path');
 //Mongoose:
 const mongoose = require('mongoose');
 const Parcel = require('./parcel');
+const parcel = require("./parcel");
 
 //Configure Express
 const app = express();
@@ -91,8 +92,15 @@ app.get('/delparcel', function (req, res) {
 //POST request: receive the parcel's name and do the delete operation
 app.post("/delete", function (req, res) {
     let parcelDetails = req.body;
-    let filter = { _id : mongodb.ObjectId(parcelDetails.id)};
-    db.collection("parcels").deleteOne(filter);
+    let filter = parcelDetails._id;
+    Parcel.findByIdAndDelete(filter, function (err, docs) {
+        if (err){
+            console.log(err)
+        }
+        else{
+            console.log("Deleted : ", docs);
+        }
+    });
     res.redirect("/getparcels"); // redirect the client to list parcels page
 });
 
