@@ -1,0 +1,32 @@
+a{
+  margin-right: 1cm;
+  color: rgb(220, 62, 141);
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+    background-image: url('background.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+  }
+
+
+
+.table2 {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table2 th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+.table2 th {
+  background-color: #8f528e;
+  color: white;
+}
+
+.table2 tr:hover {background-color: rgb(160, 112, 200);}
+.table2 tr:nth-child(even) {background-color: #f2f2f2;}

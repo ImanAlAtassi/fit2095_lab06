@@ -1,0 +1,37 @@
+<html>
+<head>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+</head>
+
+<body>
+    <img src="logo.png" width="60" height="40">
+    <h2>Welcome to POMS App (Week 4)</h2>
+    <a href="/">Home</a>
+    <a href="/addparcel">Add New Parcel</a>
+    <a href="/getparcels">List Parcels</a>
+    <a href="/delparcel">Delete Parcel</a>
+    <a href="/updateparcel">Update Parcel</a>
+    <hr />
+
+    <h3>Add New Parcel</h3>
+
+    <form action="/data" method="POST">
+        Sender:
+        <input type="text" name="sendername" /> </br>
+        Address:
+        <input type="text" name="senderaddress" /> </br>
+        Weight:
+        <input type="number" name="senderweight" /> </br>
+        Is Fragile?:
+        <select id="senderfragile" name="senderfragile">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+        </select></br>
+        <button>Submit</button>
+    </form>
+
+</body>
+
+</html>
