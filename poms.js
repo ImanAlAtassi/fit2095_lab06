@@ -92,7 +92,7 @@ app.get('/delparcel', function (req, res) {
 //POST request: receive the parcel's name and do the delete operation
 app.post("/delete", function (req, res) {
     let parcelDetails = req.body;
-    let filter = parcelDetails._id;
+    let filter = parcelDetails.id;
     Parcel.findByIdAndDelete(filter, function (err, docs) {
         if (err){
             console.log(err)
