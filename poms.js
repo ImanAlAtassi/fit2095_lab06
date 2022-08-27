@@ -80,8 +80,9 @@ app.post('/data', function (req, res) {
 
 app.get('/getparcels', function (req, res) {
     Parcel
-    .find({}, function (err, data) {
-        res.render("listparcels", { senderDb: data });
+    .find({})
+    .toArray(function (err, data) {
+      res.render("listparcels", { senderDb: data });
     });
 });
 
