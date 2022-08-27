@@ -82,7 +82,7 @@ app.get('/getparcels', function (req, res) {
     Parcel
     .find({})
     .toArray(function (err, data) {
-      res.render("listparcels", { senderDb: data });
+      res.render("listparcels", { senderDb: res });
     });
 });
 
