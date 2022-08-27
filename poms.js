@@ -20,8 +20,8 @@ app.use(morgan("common"));
 app.listen(8080);
 
 //Setup the static assets directories
-app.use("/css", express.static(path.join(__dirname, "mode_modules/bootstrap/dist/css")));
-app.use("/js", express.static(path.join(__dirname, "mode_modules/bootstrap/dist/js")));
+app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")));
+app.use("/js", express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")));
 app.use(express.static('images'));
 app.use(express.static('css'));
 
