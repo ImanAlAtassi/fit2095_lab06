@@ -85,6 +85,7 @@ app.get('/getparcels', function (req, res) {
     });
 });
 
+
 app.get('/delparcel', function (req, res) {
   res.sendFile(__dirname + "/views/delparcel.html");
 });
