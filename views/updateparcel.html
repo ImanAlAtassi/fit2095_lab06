@@ -18,19 +18,22 @@
         <hr />
         <h3>Update Parcel</h3>
     
+        <div class="container">
         <form action="/update" method="POST">
-
-            ID: <input type="text"  name="id" /> </br>
-            Sender <input type="text"  name="name" /> </br>
-            Address <input type="text"  name="address" /> </br>
-            Weight <input type="number" name="weight" /> </br>
+            <div class="form-group">
+            ID: <input type="text"  class="form-control" name="id" /> </br>
+            Sender <input type="text" class="form-control" name="name" /> </br>
+            Address <input type="text" class="form-control" name="address" /> </br>
+            Weight <input type="number" class="form-control" name="weight" /> </br>
             Is Fragile?:
-            <select id="fragile" name="fragile">
+            <select id="fragile" class="form-control" name="fragile">
             <option value="yes">Yes</option>
             <option value="no">No</option>
             </select></br>
             <input type="submit" value="Submit" /> </br>
+            </div>
         </form>
+        </div>
 
     </body>
 </html>

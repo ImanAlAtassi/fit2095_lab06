@@ -22,20 +22,24 @@
 
     <h3>Add New Parcel</h3>
 
+    <div class="container">
     <form action="/data" method="POST">
+        <div class="form-group">
         Sender:
-        <input type="text" name="sendername" /> </br>
+        <input type="text" class="form-control" name="sendername" /> </br>
         Address:
-        <input type="text" name="senderaddress" /> </br>
+        <input type="text" class="form-control" name="senderaddress" /> </br>
         Weight:
-        <input type="number" name="senderweight" /> </br>
+        <input type="number" class="form-control" name="senderweight" /> </br>
         Is Fragile?:
-        <select id="senderfragile" name="senderfragile">
+        <select id="senderfragile" class="form-control" name="senderfragile">
         <option value="yes">Yes</option>
         <option value="no">No</option>
         </select></br>
         <button>Submit</button>
+        </div>
     </form>
+    </div>
 
 </body>
 
