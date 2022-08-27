@@ -81,7 +81,7 @@ app.post('/data', function (req, res) {
 app.get('/getparcels', function (req, res) {
     Parcel
     .find({}, function (err, data) {
-      res.render("listparcels", { senderDb: res });
+        res.render("listparcels", { senderDb: data });
     });
 });
 
@@ -95,7 +95,7 @@ app.post("/delete", function (req, res) {
     let filter = parcelDetails.id;
     Parcel.findByIdAndDelete(filter, function (err, docs) {
         if (err){
-            console.log(err)
+            console.log(err);
         }
         else{
             console.log("Deleted : ", docs);
