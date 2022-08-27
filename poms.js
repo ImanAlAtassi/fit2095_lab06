@@ -78,10 +78,9 @@ app.post('/data', function (req, res) {
 })
 
 app.get('/getparcels', function (req, res) {
-    db.collection("parcels")
-    .find({})
-    .toArray(function (err, data) {
-      res.render("listparcels", { senderDb: data });
+    Parcel
+    .find({}, function (err, data) {
+        res.render("listparcels", { senderDb: data });
     });
 });
 
