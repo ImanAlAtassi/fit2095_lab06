@@ -103,7 +103,7 @@ app.post("/delete", function (req, res) {
     res.redirect("/getparcels"); // redirect the client to list parcels page
 });
 
-app.get("/listbysender", function (req, res) {
+app.get("/listsender", function (req, res) {
     res.sendFile(__dirname + "/views/listbysender.html");
 });
 
@@ -122,6 +122,31 @@ app.post('/listsender', function (req, res) {
         }
     });    
 })
+
+app.get("/listweight", function (req, res) {
+    res.sendFile(__dirname + "/views/listbyweight.html");
+});
+
+app.post('/listbyweight', function (req, res) {
+
+    let minWeight = req.body.minweight;
+    let maxWeight = req.body.maxweight;
+    let filter = {weight: { $gte: minWeight, $lte: maxWeight}};
+
+
+    Parcel
+    .find(filter, function (err, data) {
+        if (err){
+            res.sendFile(__dirname + "/views/invalidData.html");
+
+        }
+        else{
+            res.render("listparcels", { senderDb: data });
+        }
+    });    
+})
+
+
 
 //Update parcel:
 //GET request: send the page to the client

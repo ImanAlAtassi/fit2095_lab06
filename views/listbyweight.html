@@ -17,16 +17,16 @@
         <a type="button" class="btn btn-primary btn-sm" href="/updateparcel">Update Parcel</a>
         <a type="button" class="btn btn-primary btn-sm" href="/listsender">List by Sender</a>
         <a type="button" class="btn btn-primary btn-sm" href="/listweight">List by Weight</a>
-
-
         <hr />
-        <h3>Delete Parcel</h3>
+        <h3>List Parcel by Sender</h3>
 
         <div class="container">
-        <form action="/delete" method="POST">
+        <form action="/listbyweight" method="POST">
             <div class="form-group">
-            ID:<input type="text" class="form-control" name="id" /> 
-            <input type="submit" value="Delete Parcel" /> </br>
+            Minimum weight:<input type="number" class="form-control" name="minweight" />
+            Maximum weight:<input type="number" class="form-control" name="maxweight" /> 
+
+            <input type="submit" value="List" /> </br>
             </div>
         </form>
         </div>
