@@ -16,5 +16,13 @@
     "morgan": "^1.10.0"
   },
   "keywords": [],
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://imanalatassi@github.com/ImanAlAtassi/fit2095_lab06.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ImanAlAtassi/fit2095_lab06/issues"
+  },
+  "homepage": "https://github.com/ImanAlAtassi/fit2095_lab06#readme"
 }

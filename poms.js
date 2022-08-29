@@ -103,12 +103,31 @@ app.post("/delete", function (req, res) {
     res.redirect("/getparcels"); // redirect the client to list parcels page
 });
 
+app.get("/listbysender", function (req, res) {
+    res.sendFile(__dirname + "/views/listbysender.html");
+});
+
+app.post('/listsender', function (req, res) {
+
+    let senderName = req.body.listsender;
+
+    Parcel
+    .find({name: senderName}, function (err, data) {
+        if (err){
+            res.sendFile(__dirname + "/views/invalidData.html");
+
+        }
+        else{
+            res.render("listparcels", { senderDb: data });
+        }
+    });    
+})
 
 //Update parcel:
 //GET request: send the page to the client
 app.get("/updateparcel", function (req, res) {
     res.sendFile(__dirname + "/views/updateparcel.html");
-  });
+});
   
 //POST request: receive the details from the client and do the update
 app.post("/update", function (req, res) {
