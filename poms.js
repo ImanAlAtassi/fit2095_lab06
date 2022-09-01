@@ -69,7 +69,7 @@ app.post('/data', function (req, res) {
 
         parcel.save(function (err) {
             if (err) throw err;
-            console.log('Book1 successfully Added to DB');
+            console.log('parcel successfully Added to DB');
         });
 
         res.redirect("/getparcels"); // redirect the client to list parcels page
