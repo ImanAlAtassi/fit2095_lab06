@@ -183,6 +183,26 @@ app.post("/update", function (req, res) {
     res.redirect("/getparcels"); // redirect the client to list users page
 });
 
+app.get("/listsendergreaterthan5", function (req, res) {
+    res.sendFile(__dirname + "/views/namegreaterthan5.html");
+});
+
+app.post('/listsendergreaterthan5', function (req, res) {
+
+    let senderName = req.body.listsender;
+
+    Parcel.where({ name: senderName }).where('weight').gt(5).exec(function (err, docs) {
+        if (err){
+            res.sendFile(__dirname + "/views/invalidData.html");
+
+        }
+        else{
+            res.render("listparcels", { senderDb: docs });
+        }
+   
+    });
+})
+
 app.use(function(req,res){
     res.status(404).render('404.html');
 });
