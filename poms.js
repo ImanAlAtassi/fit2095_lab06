@@ -203,6 +203,26 @@ app.post('/listsendergreaterthan5', function (req, res) {
     });
 })
 
+
+app.get("/deletetodestination", function (req, res) {
+    res.sendFile(__dirname + "/views/deletetodestination.html");
+});
+
+app.post('/deletetodestination', function (req, res) {
+
+    let destination = req.body.destination;
+
+    let filter = {address: destination, weight: {$lt: 1}};
+
+    Parcel.deleteMany(filter).then(function(){
+        console.log("Data deleted"); // Success
+    }).catch(function(error){
+        console.log(error); // Failure
+    });
+    res.redirect("/getparcels"); // redirect the client to list parcels page
+
+})
+
 app.use(function(req,res){
     res.status(404).render('404.html');
 });

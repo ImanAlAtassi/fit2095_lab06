@@ -1,0 +1,40 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css"/>
+
+    </head>
+    <body>
+    <div class="jumbotran text-center">
+        <img src="logo.png" width="60" height="40">
+        <h2>Welcome to POMS App (Week 4)</h2>
+        </div>
+    
+        <a type="button" class="btn btn-primary btn-sm" href="/">Home</a>
+        <a type="button" class="btn btn-primary btn-sm" href="/addparcel">Add New Parcel</a>
+        <a type="button" class="btn btn-primary btn-sm" href="/getparcels">List Parcels</a>
+        <a type="button" class="btn btn-primary btn-sm" href="/delparcel">Delete Parcel</a>
+        <a type="button" class="btn btn-primary btn-sm" href="/updateparcel">Update Parcel</a>
+        <a type="button" class="btn btn-primary btn-sm" href="/listsender">List by Sender</a>
+        <a type="button" class="btn btn-primary btn-sm" href="/listweight">List by Weight</a>
+        <a type="button" class="btn btn-primary btn-sm" href="/listsendergreaterthan5">Task 1</a>
+        <a type="button" class="btn btn-primary btn-sm" href="/deletetodestination">Task 2</a>
+
+        <hr />
+        <h3>List Parcels less than 5kg by a specific person</h3>
+
+        <div class="container">
+            <form action="/deletetodestination" method="POST">
+                <div class="form-group">
+                Destination:<input type="text" class="form-control" name="destination" /> 
+                <input type="submit" value="List" /> </br>
+                </div>
+            </form>
+        </div>
+
+        
+        
+    
+    </body>
+</html>
+    
