@@ -15,7 +15,7 @@ const app = express();
 app.engine("html", ejs.renderFile);
 app.set("view engine", "html");
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: false })); // parse application/x-www-form-urlencoded
 app.use(morgan("common"));
 app.listen(8080);
 
